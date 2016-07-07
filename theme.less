@@ -1,0 +1,178 @@
+/*  
+  |------------------+
+  |    VARIABLES     |
+  +------------------|
+*/
+
+@background: #1f2c34;
+@dark: #2b2b2b;
+@grey-dark: #556270;
+@grey: #ddd;
+@comment: #999999;
+@white:#fff;
+@white-transparent: rgba( 255, 255, 255, 0.1 );
+
+@green: #c7f464;
+@red: #ff6b6b;
+@orange: #e8a347;
+@blue: #68dfe7;
+@blue-sea: lightseagreen;
+@yellow:  #F4C20B;
+@turquesa: #e03e4e;
+@magenta: #EB3E89;
+
+
+/*  
+  |--------------------+
+  |   GLOBAL STYLES    |
+  +--------------------|
+*/
+
+.CodeMirror, 
+.CodeMirror-scroll {
+  background-color: @background;
+  color: @grey;
+}
+
+.CodeMirror-activeline-background, 
+.CodeMirror-selected {
+  background-color: @white-transparent;
+}
+
+.CodeMirror-gutter, 
+.CodeMirror-linenumbers {
+  background-color: @background;
+  color: @grey-dark;
+}
+
+.cm-comment, 
+.cm-m-css.cm-comment {
+  color: @comment;
+  margin: 0 0 0 5px;
+}
+
+.CodeMirror-matchingbracket {
+  background-color: @white-transparent;
+  color: @yellow !important; 
+  text-shadow: 0 0 1px @yellow;
+  font-weight: bold;
+  padding: 1px;
+  border-bottom: 2px solid @orange;
+}
+
+/*  
+  |------------------------+
+  |    GENERALES STYLES    |
+  +------------------------|
+*/
+
+.cm-m-xml.CodeMirror-matchingtag, 
+.cm-m-css.cm-qualifier,
+.cm-m-javascript.cm-number {
+  color: @red;
+}
+
+.cm-string{
+  color: @orange;
+  font-style: italic;
+}
+
+.cm-m-css.cm-number, 
+.cm-m-css.cm-atom {
+  color: @orange;
+}
+
+.cm-def,
+.cm-meta {
+  color: @magenta;
+}
+
+.cm-variable-2, 
+.cm-variable-1, 
+.cm-variable,
+.cm-m-css.cm-variable-2,
+.cm-attribute,
+.cm-m-javascript.cm-def {
+  color: @green;
+}
+
+.cm-property {
+  color: @blue;
+}
+
+/*  
+  |------------------+
+  |    CSS STYLES    |
+  +------------------|
+*/
+
+.cm-m-css{
+  color: @grey;
+}
+
+.cm-m-css.cm-number, 
+.cm-m-css.cm-atom {
+  font-style: normal;
+}
+
+.cm-m-css.cm-property {
+  color: @blue;
+}
+
+.cm-m-css.cm-variable-2, 
+.cm-m-css.cm-variable-1, 
+.cm-m-css.cm-variable{
+  font-weight: bold;
+}
+
+.cm-m-css.cm-variable-3,
+.cm-m-css.cm-keyword {
+  color: @blue-sea;
+}
+
+.cm-builtin {
+  color: @turquesa;
+}
+
+
+/*  
+  |------------------+
+  |    HTML STYLES   |
+  +------------------|
+*/
+
+.cm-m-xml.cm-tag {
+  color: @blue;
+}
+
+.cm-m-xml.cm-bracket {
+  color: @white;
+}
+
+.cm-m-xml.cm-string {
+  font-style: italic;
+}
+
+.cm-m-xml.CodeMirror-matchingtag {
+  background-color: @background;
+  color: @yellow;
+}
+
+/*  
+  |----------------------+
+  |  JAVASCRIPT STYLES   |
+  +----------------------|
+*/
+
+.cm-m-javascript.cm-keyword { 
+  color: @blue;
+}
+
+.cm-m-javascript.cm-property {
+  color: @yellow;
+}
+
+.cm-m-javascript.cm-operator {
+  color: @grey;
+  font-size: 1.1em;
+}
