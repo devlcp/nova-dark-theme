@@ -2,9 +2,9 @@
   "name": "devlcp.nova-dark",
   "title": "Nova Dark",
   "description": "Nova Dark theme.",
-  "homepage": "https://github.com/devlcp/nova-dark-atom",
+  "homepage": "https://github.com/devlcp/nova-dark",
   "version": "0.1.0",
-  "author": "Your Name <your@email> (http://your.url)",
+  "author": "devlcp <dev.leopold@gmail.com> (https://github.com/devlcp/nova-dark)",
   "license": "MIT",
   "theme": {
         "file": "theme.less",
