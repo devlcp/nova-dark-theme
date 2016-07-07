@@ -6,6 +6,9 @@
   "version": "0.1.0",
   "author": "devlcp <dev.leopold@gmail.com> (https://github.com/devlcp/nova-dark)",
   "license": "MIT",
+  "engines": {
+        "brackets": ">=1.4.0"
+    },
   "theme": {
         "file": "theme.less",
         "dark": true,
