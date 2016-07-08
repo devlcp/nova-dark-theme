@@ -47,7 +47,7 @@
 }
 
 .CodeMirror-cursor, .CodeMirror-cursors{
-  border-left: 2px solid @grey !important;
+  border-left: 1px solid @grey !important;
 }
 
 .cm-comment, 
@@ -186,11 +186,13 @@
   color: @white;
 }
 
-.cm-m-xml.cm-tag {
+.cm-m-xml.cm-tag,
+.cm-m-markdown.cm-tag {
   color: @blue;
 }
 
-.cm-m-xml.cm-bracket.CodeMirror-matchingtag, .cm-m-xml.cm-tag.CodeMirror-matchingtag {
+.cm-m-xml.cm-bracket.CodeMirror-matchingtag, 
+.cm-m-xml.cm-tag.CodeMirror-matchingtag {
   background-color: @background;
   color: @yellow;
   font-weight: bold;
@@ -203,6 +205,14 @@
 .cm-m-xml.cm-def,
 .cm-m-xml.cm-meta{
   font-weight: bold;
+}
+
+.cm-m-markdown.cm-link{
+  color: @red-light;
+}
+
+.cm-m-markdown.cm-header {
+  color: @yellow-light;
 }
 
 /*  
@@ -236,3 +246,25 @@
   font-weight: bold;
 }
 
+
+/*  
+  |----------------------+
+  |     PHP STYLES       |
+  +----------------------|
+*/
+
+.cm-m-clike.cm-operator {
+  color: @blue-sea;
+}
+
+.cm-m-clike.cm-variable-2 {
+  border-bottom: 1px dashed @grey-dark;
+}
+
+.cm-m-clike.cm-variable {
+  color: @yellow-light;
+}
+
+.cm-m-clike.cm-number {
+  color: @yellow;
+}
