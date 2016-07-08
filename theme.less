@@ -14,11 +14,12 @@
 
 @green: #c7f464;
 @red: #ff6b6b;
+@red-light: #ff8b94;
 @orange: #e8a347;
 @blue: #68dfe7;
-@blue-sea: lightseagreen;
+@blue-sea: #d4ffea;
 @yellow:  #F4C20B;
-@turquesa: #e03e4e;
+@yellow-light: #feffa3;
 @magenta: #EB3E89;
 
 
@@ -45,6 +46,10 @@
   color: @grey-dark;
 }
 
+.CodeMirror-cursor, .CodeMirror-cursors{
+  border-left: 2px solid @grey !important;
+}
+
 .cm-comment, 
 .cm-m-css.cm-comment {
   color: @comment;
@@ -65,20 +70,13 @@
   |    GENERALES STYLES    |
   +------------------------|
 */
-
-.cm-m-xml.CodeMirror-matchingtag, 
-.cm-m-css.cm-qualifier,
-.cm-m-javascript.cm-number {
-  color: @red;
+ 
+.cm-qualifier {
+  color: @red-light;
 }
 
-.cm-string{
-  color: @orange;
-  font-style: italic;
-}
-
-.cm-m-css.cm-number, 
-.cm-m-css.cm-atom {
+.cm-string,
+.cm-number {
   color: @orange;
 }
 
@@ -90,14 +88,21 @@
 .cm-variable-2, 
 .cm-variable-1, 
 .cm-variable,
-.cm-m-css.cm-variable-2,
-.cm-attribute,
-.cm-m-javascript.cm-def {
+.cm-attribute {
   color: @green;
 }
 
-.cm-property {
+.cm-property, 
+.cm-keyword {
   color: @blue;
+}
+
+.cm-builtin {
+  color: @red;
+}
+
+.cm-variable-3 {
+  color: @blue-sea;
 }
 
 /*  
@@ -106,32 +111,67 @@
   +------------------|
 */
 
-.cm-m-css{
+
+.cm-m-css, 
+.cm-m-sass.cm-operator {
   color: @grey;
 }
 
-.cm-m-css.cm-number, 
-.cm-m-css.cm-atom {
-  font-style: normal;
+.cm-m-css.cm-builtin {
+  color: @red;
+}
+
+.cm-m-css.cm-qualifier,
+.cm-m-sass.cm-atom {
+  color: @red-light !important;
+}
+
+.cm-m-css.cm-number,
+.cm-m-sass.cm-unit {
+  color: @orange;
+}
+
+.cm-m-css.cm-variable-2,
+.cm-m-css.cm-variable-1,
+.cm-m-css.cm-variable,
+.cm-m-css.cm-atom,
+.cm-m-sass.cm-attribute,
+.cm-m-stylus.cm-atom {
+  color: @green;
+}
+
+.cm-m-stylus.cm-variable-2,
+.cm-m-css.cm-variable-2{
+  border-bottom: 1px dashed @grey-dark;
+}
+
+.cm-m-css.cm-variable-3,
+.cm-m-stylus.cm-variable-3 {
+  color: @blue-sea;
+}
+
+.cm-m-css.cm-tag,
+.cm-m-stylus.cm-tag {
+  color: @yellow-light;
 }
 
 .cm-m-css.cm-property {
   color: @blue;
 }
 
-.cm-m-css.cm-variable-2, 
-.cm-m-css.cm-variable-1, 
-.cm-m-css.cm-variable{
+.cm-m-css.cm-def,
+.cm-m-css.cm-meta,
+.cm-m-stylus.cm-def,
+.cm-m-stylus.cm-meta,
+.cm-m-sass.cm-def,
+.cm-m-sass.cm-meta{
   font-weight: bold;
-}
-
-.cm-m-css.cm-variable-3,
-.cm-m-css.cm-keyword {
   color: @blue-sea;
 }
 
-.cm-builtin {
-  color: @turquesa;
+.cm-m-css.cm-keyword, 
+.cm-m-css.cm-attribute {
+  color: @blue-sea;  
 }
 
 
@@ -141,21 +181,28 @@
   +------------------|
 */
 
-.cm-m-xml.cm-tag {
-  color: @blue;
-}
 
 .cm-m-xml.cm-bracket {
   color: @white;
 }
 
-.cm-m-xml.cm-string {
-  font-style: italic;
+.cm-m-xml.cm-tag {
+  color: @blue;
 }
 
-.cm-m-xml.CodeMirror-matchingtag {
+.cm-m-xml.cm-bracket.CodeMirror-matchingtag, .cm-m-xml.cm-tag.CodeMirror-matchingtag {
   background-color: @background;
   color: @yellow;
+  font-weight: bold;
+}
+
+.cm-m-xml.CodeMirror-matchingtag{
+  background-color: @background;
+}
+
+.cm-m-xml.cm-def,
+.cm-m-xml.cm-meta{
+  font-weight: bold;
 }
 
 /*  
@@ -164,15 +211,28 @@
   +----------------------|
 */
 
-.cm-m-javascript.cm-keyword { 
-  color: @blue;
+.cm-m-javascript.cm-keyword {
+  color: @green;
 }
 
 .cm-m-javascript.cm-property {
   color: @yellow;
 }
 
-.cm-m-javascript.cm-operator {
-  color: @grey;
-  font-size: 1.1em;
+.cm-m-javascript.cm-variable,
+.cm-m-javascript.cm-variable-2,
+.cm-m-javascript.cm-variable-3,
+.cm-m-javascript.cm-def {
+  color: @blue-sea !important;
+  border-bottom: 1px dashed @grey-dark;
 }
+
+.cm-m-javascript.cm-operator{
+  color: @blue;
+}
+
+.cm-m-javascript.cm-number {
+  color: @red;
+  font-weight: bold;
+}
+
