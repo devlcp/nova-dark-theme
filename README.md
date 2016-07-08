@@ -1,10 +1,18 @@
-<h1>Nova Dark Theme </h1>
+# Nova Dark Theme
 
-<h3>Javascript</h3>
-<img src="img/javascript.png" />
+### Javascript
+![Alt javascript](img/javascript.png "javascript")
 
-<h3>HTML</h3>
-<img src="img/html.png" />
+### HTML
+![Alt html](img/html.png "html")
 
-<h3>CSS, LESS, STYLUS, SASS</h3>
-<img src="img/css.png" />
+### CSS, LESS, STYLUS, SASS 
+![Alt css](img/css.png "css")
+
+### Markdown
+![Alt markdown](img/markdown.png "markdown")
+
+### PHP
+![Alt php](img/php.png "php")
+  
+  
